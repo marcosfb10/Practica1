@@ -1,0 +1,72 @@
+*{
+    body{
+        >main{
+            font-family: 'Grenze', serif;
+            color:green;
+            >div{
+                >h1{
+                    font-family: 'Mansalva', cursive;
+
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:400px){
+
+}
+@media screen and (min-width:401px) and (max-width:640px){
+
+}
+@media screen and (min-width:641px){
+    body{
+        >main{
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+            >div{
+                text-align: center;
+                >h1{
+                    width: 100%;
+                }
+            }
+            >span{
+                font-size: 16pt;
+                border:2px solid green;
+                display: inline-block;
+                width: 100%; 
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+            }
+            >p{
+                text-align: right;
+                color: black;
+                font-size: 10pt;
+            }
+            >h2{
+                width: 100%;
+                text-align: left;
+                color: black;
+                border:2px solid green;
+                border-left: none;
+                border-right: none;
+            }
+            >form{
+                display: inline-block;
+                text-align: left;
+                margin-left: 20%;
+               
+                
+            }
+
+
+        }
+    }
+}
+@media screen and (min-width:1024px){
+
+}
+
+
+
+
