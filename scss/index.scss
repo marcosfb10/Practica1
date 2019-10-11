@@ -21,7 +21,7 @@
 @media screen and (min-width:641px){
     body{
         >main{
-            width: 90%;
+            width: 100%;
             margin: 0 auto;
             >div{
                 text-align: center;
@@ -70,7 +70,6 @@
                     }
                 }
             }
-
             >p{
                 text-align: right;
                 color: black;
@@ -99,7 +98,6 @@
                             color: red;
                         }
                     }
-
                 }
                 >article{
                     >div{
@@ -119,34 +117,27 @@
                             display: inline-block;
                             margin-left: 10%;
                             width: 10%;
-
                         }
                         >input{
                             width: 75%;
                         }
                         >select{
-                            width: 80%;
+                            width: 75%;
                         }
-
                     }
-
-
-
                 }
-
                 >div{
                     margin-left: 8%;
+                    margin-bottom: 1em;
                     >div{
                         display: inline-block;
                         margin-left: 10%;
                         width: 15%;
                     }
-
-
-
-
                 }
-
+                >input[type="submit"]{
+                    margin-left: 92%;
+                }
             }
 
 

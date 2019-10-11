@@ -8,7 +8,7 @@
 
 @media screen and (min-width: 641px) {
   body > main {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
   body > main > div {
@@ -100,15 +100,19 @@
     width: 75%;
   }
   body > main > form > article > div > select {
-    width: 80%;
+    width: 75%;
   }
   body > main > form > div {
     margin-left: 8%;
+    margin-bottom: 1em;
   }
   body > main > form > div > div {
     display: inline-block;
     margin-left: 10%;
     width: 15%;
+  }
+  body > main > form > input[type=submit] {
+    margin-left: 92%;
   }
 }
 
