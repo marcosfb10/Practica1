@@ -8,12 +8,8 @@
 
 @media screen and (min-width: 641px) {
   body > main {
-    text-align: center;
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
-  }
-  body > main > div {
-    text-align: center;
   }
   body > main > div > h1 {
     width: 100%;
@@ -26,23 +22,85 @@
     padding-top: 0.5em;
     padding-bottom: 0.5em;
   }
+  body > main > ul {
+    text-align: right;
+  }
+  body > main > ul > li > ul {
+    padding: 0;
+    margin: 0;
+    display: none;
+    list-style: none;
+  }
+  body > main > ul > li > ul > li {
+    display: block;
+  }
+  body > main > ul > li:hover > ul {
+    text-align: left;
+    display: block;
+    background-color: darkgreen;
+  }
+  body > main > ul > li:hover > ul > li {
+    display: list-item;
+    color: lightgreen;
+  }
+  body > main > ul > li:hover > ul > li:hover {
+    background-color: lightgreen;
+    color: darkgreen;
+  }
   body > main > p {
     text-align: right;
     color: black;
     font-size: 10pt;
   }
-  body > main > h2 {
+  body > main > form {
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+  }
+  body > main > form > h2 {
     width: 100%;
     text-align: left;
     color: black;
     border: 2px solid green;
     border-left: none;
     border-right: none;
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
-  body > main > form {
+  body > main > form > div {
+    width: 100%;
+  }
+  body > main > form > div > label > span.requerido {
+    content: "(*)";
+    color: red;
+  }
+  body > main > form > article > div {
+    width: 100%;
+  }
+  body > main > form > article > div > label > span.requerido, body > main > form > article > div input > span.requerido {
+    content: "(*)";
+    color: red;
+  }
+  body > main > form > article > div > input[type=number], body > main > form > article > div input[type=date] {
+    width: 10%;
+  }
+  body > main > form > article > div > label {
+    margin-left: 50px;
+    width: 10%;
+  }
+  body > main > form > article > div > input {
+    width: 75%;
+  }
+  body > main > form > article > div > select {
+    width: 80%;
+  }
+  body > main > form > div {
     display: inline-block;
-    text-align: left;
-    margin-left: 20%;
+    margin-left: 10%;
+    width: 20%;
+  }
+  body > main > form > div > label, body > main > form > div input {
+    margin: 0 auto;
   }
 }
 

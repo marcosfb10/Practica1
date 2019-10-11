@@ -6,7 +6,6 @@
             >div{
                 >h1{
                     font-family: 'Mansalva', cursive;
-
                 }
             }
         }
@@ -21,11 +20,9 @@
 @media screen and (min-width:641px){
     body{
         >main{
-            text-align: center;
-            width: 100%;
+            width: 90%;
             margin: 0 auto;
             >div{
-                text-align: center;
                 >h1{
                     width: 100%;
                 }
@@ -38,25 +35,108 @@
                 padding-top: 0.5em;
                 padding-bottom: 0.5em;
             }
+            >ul{
+                text-align: right;
+                >li{
+                    >ul{
+                        padding: 0;
+                        margin: 0;
+                        display: none;
+                        list-style: none;
+                        >li{
+                            display: block;
+                        }
+
+                    }
+
+                }
+                >li:hover{
+                    >ul{
+                        text-align: left;
+                        display:block;  
+                        background-color:darkgreen;
+                        >li{
+                            display: list-item;
+                            color: lightgreen;
+                        }
+                        >li:hover{
+                            background-color:lightgreen;
+                            color:darkgreen;
+                        }
+                    }
+                }
+            }
+
             >p{
                 text-align: right;
                 color: black;
                 font-size: 10pt;
             }
-            >h2{
-                width: 100%;
-                text-align: left;
-                color: black;
-                border:2px solid green;
-                border-left: none;
-                border-right: none;
-            }
             >form{
                 display: inline-block;
-                text-align: left;
-                margin-left: 20%;
-               
-                
+                margin: 0 auto;
+                width: 100%;
+
+                >h2{
+                    width: 100%;
+                    text-align: left;
+                    color: black;
+                    border:2px solid green;
+                    border-left: none;
+                    border-right: none;
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                }
+                >div{
+                    width: 100%;
+                    >label{
+                        >span.requerido{
+                            content: "(*)";
+                            color: red;
+                        }
+                    }
+
+                }
+                >article{
+                    >div{
+                        width: 100%;
+                        >label,input{ 
+                            >span.requerido{
+                                content: "(*)";
+                                color: red;
+                            }
+                        }
+                        >input[type=number], input[type=date]{
+                            width: 10%;   
+                        }
+                        >label{
+                            margin-left: 50px;
+                            width: 10%;
+
+                        }
+                        >input{
+                            width: 75%;
+                        }
+                        >select{
+                            width: 80%;
+                        }
+
+                    }
+
+
+
+                }
+
+                >div{
+                    display: inline-block;
+                    margin-left: 10%;
+                    width: 20%;
+                    >label,input{
+                        margin: 0 auto;
+
+                    }
+                }
+
             }
 
 
