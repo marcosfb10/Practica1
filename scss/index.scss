@@ -16,12 +16,9 @@
 
 }
 @media screen and (min-width:401px) and (max-width:640px){
-
-}
-@media screen and (min-width:641px){
     body{
         >main{
-            width: 100%;
+            width: 50%;
             margin: 0 auto;
             >div{
                 text-align: center;
@@ -40,6 +37,7 @@
             >ul{
                 text-align: right;
                 >li{
+                    
                     >ul{
                         padding: 0;
                         margin: 0;
@@ -53,6 +51,7 @@
 
                 }
                 >li:hover{
+                    cursor: pointer;
                     >ul{
                         text-align: left;
                         display:block;  
@@ -110,13 +109,145 @@
                             }
                         }
                         >input[type=number], input[type=date]{
+                            width: 52%;   
+                        }
+                        >label{
+                            text-align: left;
+                            display: inline-block;
+                            
+                            width: 50%;
+                        }
+                        >input{
+                            width: 85%;
+                        }
+                        >select{
+                            width: 75%;
+                        }
+                    }
+                }
+                >div{
+                    margin-bottom: 1em;
+                    >div{
+                        display: inline-block;
+                        width: 31%;
+                        >input[type=number]{
+                            width: 30%;
+                        }
+                    }
+                    
+                    
+                }
+                >input[type="submit"]{
+                    margin-left: 60%;
+                }
+            }
+
+
+        }
+    }
+}
+
+@media screen and (min-width:641px){
+    body{
+        >main{
+            width: 100%;
+            margin: 0 auto;
+            >div{
+                text-align: center;
+                >h1{
+                    width: 100%;
+                }
+            }
+            >span{
+                font-size: 16pt;
+                border:2px solid green;
+                display: inline-block;
+                width: 100%; 
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+            }
+            >ul{
+                text-align: right;
+                >li{
+                    >ul{
+                        padding: 0;
+                        margin: 0;
+                        display: none;
+                        list-style: none;
+                        >li{
+                            display: block;
+                        }
+
+                    }
+
+                }
+                >li:hover{
+                    cursor:pointer;
+                    >ul{
+                        text-align: left;
+                        display:block;  
+                        background-color:darkgreen;
+                        >li{
+                            padding-top: 5px;
+                            padding-bottom: 5px;
+                            display: list-item;
+                            color: lightgreen;
+                        }
+                        >li:hover{
+                            background-color:lightgreen;
+                            color:darkgreen;
+                            
+                        }
+                    }
+                }
+            }
+            >p{
+                text-align: right;
+                color: black;
+                font-size: 10pt;
+            }
+            >form{
+                display: inline-block;
+                margin: 0 auto;
+                width: 100%;
+
+                >h2{
+                    width: 100%;
+                    text-align: left;
+                    color: black;
+                    border:2px solid green;
+                    border-left: none;
+                    border-right: none;
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                }
+                >div{
+                    width: 100%;
+                    >label{
+                        >span.requerido{
+                            content: "(*)";
+                            color: red;
+                        }
+                    }
+                }
+                >article{
+                    >div{
+                        width: 100%;
+                        margin-bottom: 1em;
+                        >label,input{ 
+                            >span.requerido{
+                                content: "(*)";
+                                color: red;
+                            }
+                        }
+                        >input[type=number], input[type=date]{
                             width: 10%;   
                         }
                         >label{
                             text-align: right;
                             display: inline-block;
-                            margin-left: 10%;
-                            width: 10%;
+                            margin-left: 4%;
+                            width: 16%;
                         }
                         >input{
                             width: 75%;
@@ -130,9 +261,13 @@
                     margin-left: 8%;
                     margin-bottom: 1em;
                     >div{
-                        display: inline-block;
-                        margin-left: 10%;
-                        width: 15%;
+                        display: inline-flex;
+                        margin-left: 7%;
+                        width: 16%;
+                      
+                        input[type="number"]{
+                            width: 55%;
+                        }
                     }
                 }
                 >input[type="submit"]{
