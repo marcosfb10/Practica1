@@ -11,6 +11,9 @@
     width: 90%;
     margin: 0 auto;
   }
+  body > main > div {
+    text-align: center;
+  }
   body > main > div > h1 {
     width: 100%;
   }
@@ -40,6 +43,8 @@
     background-color: darkgreen;
   }
   body > main > ul > li:hover > ul > li {
+    padding-top: 5px;
+    padding-bottom: 5px;
     display: list-item;
     color: lightgreen;
   }
@@ -76,6 +81,7 @@
   }
   body > main > form > article > div {
     width: 100%;
+    margin-bottom: 1em;
   }
   body > main > form > article > div > label > span.requerido, body > main > form > article > div input > span.requerido {
     content: "(*)";
@@ -85,6 +91,8 @@
     width: 10%;
   }
   body > main > form > article > div > label {
+    text-align: right;
+    display: inline-block;
     margin-left: 10%;
     width: 10%;
   }
@@ -95,12 +103,12 @@
     width: 80%;
   }
   body > main > form > div {
+    margin-left: 8%;
+  }
+  body > main > form > div > div {
     display: inline-block;
     margin-left: 10%;
-    width: 20%;
-  }
-  body > main > form > div > label, body > main > form > div input {
-    margin: 0 auto;
+    width: 15%;
   }
 }
 

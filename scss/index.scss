@@ -1,5 +1,6 @@
 *{
     body{
+
         >main{
             font-family: 'Grenze', serif;
             color:green;
@@ -23,6 +24,7 @@
             width: 90%;
             margin: 0 auto;
             >div{
+                text-align: center;
                 >h1{
                     width: 100%;
                 }
@@ -56,6 +58,8 @@
                         display:block;  
                         background-color:darkgreen;
                         >li{
+                            padding-top: 5px;
+                            padding-bottom: 5px;
                             display: list-item;
                             color: lightgreen;
                         }
@@ -100,6 +104,7 @@
                 >article{
                     >div{
                         width: 100%;
+                        margin-bottom: 1em;
                         >label,input{ 
                             >span.requerido{
                                 content: "(*)";
@@ -110,8 +115,8 @@
                             width: 10%;   
                         }
                         >label{
-
-
+                            text-align: right;
+                            display: inline-block;
                             margin-left: 10%;
                             width: 10%;
 
@@ -130,13 +135,16 @@
                 }
 
                 >div{
-                    display: inline-block;
-                    margin-left: 10%;
-                    width: 20%;
-                    >label,input{
-                        margin: 0 auto;
-
+                    margin-left: 8%;
+                    >div{
+                        display: inline-block;
+                        margin-left: 10%;
+                        width: 15%;
                     }
+
+
+
+
                 }
 
             }
