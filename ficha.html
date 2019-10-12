@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Empresa S.A</title>
-        <link href="css/index.css" rel="stylesheet" type="text/css"/>
+        <link href="css/ficha.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css?family=Grenze&display=swap" rel="stylesheet">
         <link href="css/all.css" rel="stylesheet" type="text/css"/>
@@ -18,16 +18,16 @@
             <ul>                  
                 <li class="fas fa-align-justify">
                     <ul>
-                        <li class="fas fa-home">Inicio</li>
-                        <li class="fas fa-calculator">Ventas</li>
-                        <li class="fas fa-book">Contabilidad</li>
-                        <li class="fas fa-clipboard">Formulario</li>
-                        <li class="fas fa-chart-pie">Informes</li>
+                        <li class="fas fa-home"><a href="index.html" target="blank">Inicio</a></li>
+                        <li class="fas fa-calculator"><a href="ventas.html" target="blank">Ventas</a></li>
+                        <li class="fas fa-book"><a href="contabilidad.html" target="blank">Contabilidad</a></li>
+                        <li class="fas fa-clipboard"><a href="ficha.html" target="blank">Formulario</a></li>
+                        <li class="fas fa-chart-pie"><a href="informes.html" target="blank">Informes</a></li>
                     </ul>
                 </li>
             </ul>
             <p>18 de Septiembre de 2018</p>
-            <form>
+            <form action="datos.php" method="post">
                 <h2 class="fas fa-user">Datos personales</h2>
 
 
@@ -54,7 +54,7 @@
                     <div>
                         <label for="idApe">Apellidos: <span class="requerido">(*)</span></label>
                         <input type="text" id="idApe" 
-                               pattern="[A-NÑO-Z]([a-nño-z]?){49}"
+                               pattern="([A-NÑO-Za-nño-z\s]?){49}"
                                name="apellidos" title="de 1 a 50 caracteres. Sólo se admiten caracteres del alfabeto castellano" 
                                required/><br>
                     </div>
@@ -63,7 +63,9 @@
                     <div>
                         <label for="idTel">Telefono: <span class="requerido">(*)</span></label>
                         <input type="number" id="idTel" 
-                               name="telefono" 
+                               name="telefono"
+                               min="100000000"
+                               max="999999999"
                                pattern="[0-9]{9}" 
                                title="solo se admiten 9 dígitos"
                                required/><br>
@@ -87,7 +89,11 @@
 
                     <div>
                         <label for="idEmail">email: <span class="requerido">(*)</span></label>
-                        <input type="email" id="idEmail" name="email" title="dirección de correo válida" required/><br>
+                        <input type="email" 
+                               id="idEmail" 
+                               name="email" 
+                               title="dirección de correo válida" 
+                               required/><br>
                     </div>
 
                 </article>
@@ -99,8 +105,8 @@
                     <div>
                         <label for="idSexo">sexo: </label>
                         <div>
-                            <input type="radio" id="idSexo" name="genero" value="V" checked required>V
-                            <input type="radio" id="idSexo" name="genero" value="H">H
+                            <input type="radio" id="idSexo" name="sexo" value="V" checked required>V
+                            <input type="radio" id="idSexo" name="sexo" value="H">H
                         </div>
 
                     </div>
@@ -114,7 +120,11 @@
 
                     <div>
                         <label for="idHijos">hijos: </label>
-                        <input type="number" id="idHijos" pattern="([0-9]?){20}" 
+                        <input type="number" 
+                               id="idHijos" 
+                               pattern="([0-9]?){20}"
+                               min="0"
+                               max="20"
                                title="número de hijos. Entre 0 y 20"
                                name="numeroHijos"/>
                     </div><br>
@@ -140,7 +150,11 @@
 
                     <div>
                         <label for="idCP">codigo postal: </label>
-                        <input type="number" id="idCP"/><br>
+                        <input type="number" id="idCP"
+                               title="código postal. 5 dígitos"
+                               name="codigoPostal"
+                               min="10000"
+                               max="99999"/><br>
                     </div>
 
                 </article>
@@ -152,19 +166,34 @@
                 <article>
                     <div>
                         <label for="idBanco">Banco: <span class="requerido">(*)</span></label>
-                        <input type="text" id="idBanco" required/><br>
+                        <input type="text" 
+                               id="idBanco" 
+                               name="banco"
+                               title="nombre del banco. Hasta 30 caracteres"
+                               required
+                               pattern="([0-9|[A-Za-z])(([0-9|[A-Za-z]|[\s])?){29}"/><br>
                     </div>
 
 
                     <div>
                         <label for="idSucursal">Sucursal: <span class="requerido">(*)</span></label>
-                        <input type="text" id="idSucursal"/><br>
+                        <input type="text" 
+                               id="idSucursal"
+                               name="sucursal"
+                               title="nombre y dirección de la sucursal. Hasta 30 caracteres"
+                               pattern="([0-9|[A-Za-z])(([0-9|[A-Za-z]|[\s])?){29}"
+                               required/><br>
                     </div>
 
 
                     <div>
                         <label for="idCuenta">cuenta: <span class="requerido">(*)</span></label>
-                        <input type="text" id="idCuenta" pattern="[0-9]{4}-[0-9]{4}-[0-9]{2}-[0-9]{10}"/><br>
+                        <input type="text" 
+                               id="idCuenta" 
+                               name="cuenta"
+                               pattern="[0-9]{4}-[0-9]{4}-[0-9]{2}-[0-9]{10}"
+                               title="nº de cuenta en formato xxxx-xxxx-xx-xxxxxxxxxx"
+                               required/><br>
                     </div>
                 </article>
                 <input type="submit"/>

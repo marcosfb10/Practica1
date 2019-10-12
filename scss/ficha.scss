@@ -1,24 +1,27 @@
+$verdeOscuro : darkgreen;
+$verdeClaro: lightgreen;
 *{
     body{
 
         >main{
             font-family: 'Grenze', serif;
-            color:green;
+            color:$verdeOscuro;
             >div{
                 >h1{
                     font-family: 'Mansalva', cursive;
                 }
             }
+            >span{
+                text-align: center; 
+            }
         }
     }
 }
 @media screen and (max-width:400px){
-
-}
-@media screen and (min-width:401px) and (max-width:640px){
     body{
+        max-width: 400px;
         >main{
-            width: 50%;
+            width: 394px;
             margin: 0 auto;
             >div{
                 text-align: center;
@@ -37,7 +40,7 @@
             >ul{
                 text-align: right;
                 >li{
-                    
+
                     >ul{
                         padding: 0;
                         margin: 0;
@@ -46,6 +49,145 @@
                         >li{
                             display: block;
                         }
+                    }
+                }
+                >li:hover{
+                    cursor: pointer;
+                    >ul{
+                        text-align: left;
+                        display:block;  
+                        background-color:$verdeOscuro;
+                        >li{
+                            padding-top: 5px;
+                            padding-bottom: 5px;
+                            display: list-item;
+                            color: $verdeClaro;
+                            >a{
+                                color:$verdeClaro;
+                                text-decoration: none;
+                            }
+                        }
+                        >li:hover{
+                            >a{
+                                color: $verdeOscuro;
+                                text-decoration: none;
+                            }
+                            background-color:$verdeClaro;
+                            color:$verdeOscuro;
+                        }
+                    }
+                }
+            }
+            >p{
+                text-align: right;
+                color: black;
+                font-size: 10pt;
+            }
+            >form{
+                display: inline-block;
+                width: 100%;
+                >h2{
+                    width: 100%;
+                    text-align: left;
+                    color: black;
+                    border:2px solid green;
+                    border-left: none;
+                    border-right: none;
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                }
+                >div{
+                    width: 100%;
+                    >label{
+                        >span.requerido{
+                            content: "(*)";
+                            color: red;
+                        }
+                    }
+                }
+                >article{
+                    >div{
+                        width: 100%;
+                        margin-bottom: 1em;
+                        >label,input{ 
+                            >span.requerido{
+                                content: "(*)";
+                                color: red;
+                            }
+                        }
+                        >input[type=number], input[type=date]{
+                            width: 52%;   
+                        }
+                        >label{
+                            text-align: left;
+                            display: inline-block;
+                            width: 50%;
+                        }
+                        >input{
+                            width: 85%;
+                        }
+                        >select{
+                            width: 75%;
+                        }
+                    }
+                }
+                >div{
+                   width: 260px;
+                    margin-bottom: 1em;
+                    >div{
+                        display: inline-block;
+                        width: 31%;
+                        >input[type=number]{
+                            width: 30%;
+                        }
+                    }
+
+
+                }
+                >input[type="submit"]{
+                    margin-left: 60%;
+                }
+            }
+
+
+        }
+    }
+}
+@media screen and (min-width:401px) and (max-width:640px){
+    body{
+        margin:auto;
+        >main{
+            width: 394px;
+            margin: 0 auto;
+            >div{
+                text-align: center;
+                >h1{
+                    width: 100%;
+                }
+            }
+            >span{
+                font-size: 16pt;
+                border:2px solid green;
+                display: inline-block;
+                width: 100%; 
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+            }
+            >ul{
+                text-align: right;
+                >li{
+
+                    >ul{
+                        padding: 0;
+                        margin: 0;
+                        display: none;
+                        list-style: none;
+                        >li{
+                            display: block;
+
+
+                        }
+
 
                     }
 
@@ -55,16 +197,24 @@
                     >ul{
                         text-align: left;
                         display:block;  
-                        background-color:darkgreen;
+                        background-color:$verdeOscuro;
                         >li{
                             padding-top: 5px;
                             padding-bottom: 5px;
                             display: list-item;
-                            color: lightgreen;
+                            color: $verdeClaro;
+                            >a{
+                                color:$verdeClaro;
+                                text-decoration: none;
+                            }
                         }
                         >li:hover{
-                            background-color:lightgreen;
-                            color:darkgreen;
+                            >a{
+                                color: $verdeOscuro;
+                                text-decoration: none;
+                            }
+                            background-color:$verdeClaro;
+                            color:$verdeOscuro;
                         }
                     }
                 }
@@ -114,7 +264,6 @@
                         >label{
                             text-align: left;
                             display: inline-block;
-                            
                             width: 50%;
                         }
                         >input{
@@ -126,6 +275,7 @@
                     }
                 }
                 >div{
+                    width: 260px;
                     margin-bottom: 1em;
                     >div{
                         display: inline-block;
@@ -134,8 +284,8 @@
                             width: 30%;
                         }
                     }
-                    
-                    
+
+
                 }
                 >input[type="submit"]{
                     margin-left: 60%;
@@ -186,17 +336,24 @@
                     >ul{
                         text-align: left;
                         display:block;  
-                        background-color:darkgreen;
+                        background-color:$verdeOscuro;
                         >li{
                             padding-top: 5px;
                             padding-bottom: 5px;
                             display: list-item;
-                            color: lightgreen;
+                            color: $verdeClaro;
+                            >a{
+                                color:$verdeClaro;
+                                text-decoration: none;
+                            }
                         }
                         >li:hover{
-                            background-color:lightgreen;
-                            color:darkgreen;
-                            
+                            background-color: $verdeClaro;
+                            color: $verdeOscuro;
+                            >a{
+                                color: $verdeOscuro;
+                                text-decoration: none;
+                            }
                         }
                     }
                 }
@@ -264,7 +421,7 @@
                         display: inline-flex;
                         margin-left: 7%;
                         width: 16%;
-                      
+
                         input[type="number"]{
                             width: 55%;
                         }
