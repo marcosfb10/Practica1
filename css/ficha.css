@@ -259,7 +259,7 @@
 @media screen and (min-width: 641px) {
   body > main {
     width: 100%;
-    margin: 0 auto;
+    /*            margin: 0 auto;*/
   }
   body > main > div {
     text-align: center;
@@ -376,7 +376,132 @@
     width: 55%;
   }
   body > main > form > input[type=submit] {
-    margin-left: 92%;
+    float: right;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    margin: 0 auto;
+  }
+  body > main {
+    width: 1007px;
+  }
+  body > main > div {
+    text-align: center;
+  }
+  body > main > div > h1 {
+    width: 100%;
+  }
+  body > main > span {
+    font-size: 16pt;
+    border: 2px solid green;
+    display: inline-block;
+    width: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+  body > main > ul {
+    text-align: right;
+  }
+  body > main > ul > li > ul {
+    padding: 0;
+    margin: 0;
+    display: none;
+    list-style: none;
+  }
+  body > main > ul > li > ul > li {
+    display: block;
+  }
+  body > main > ul > li:hover {
+    cursor: pointer;
+  }
+  body > main > ul > li:hover > ul {
+    text-align: left;
+    display: block;
+    background-color: darkgreen;
+  }
+  body > main > ul > li:hover > ul > li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: list-item;
+    color: lightgreen;
+  }
+  body > main > ul > li:hover > ul > li > a {
+    color: lightgreen;
+    text-decoration: none;
+  }
+  body > main > ul > li:hover > ul > li:hover {
+    background-color: lightgreen;
+    color: darkgreen;
+  }
+  body > main > ul > li:hover > ul > li:hover > a {
+    color: darkgreen;
+    text-decoration: none;
+  }
+  body > main > p {
+    text-align: right;
+    color: black;
+    font-size: 10pt;
+  }
+  body > main > form {
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+  }
+  body > main > form > h2 {
+    width: 100%;
+    text-align: left;
+    color: black;
+    border: 2px solid green;
+    border-left: none;
+    border-right: none;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  body > main > form > div {
+    width: 100%;
+  }
+  body > main > form > div > label > span.requerido {
+    content: "(*)";
+    color: red;
+  }
+  body > main > form > article > div {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  body > main > form > article > div > label > span.requerido, body > main > form > article > div input > span.requerido {
+    content: "(*)";
+    color: red;
+  }
+  body > main > form > article > div > input[type=number], body > main > form > article > div input[type=date] {
+    width: 10%;
+  }
+  body > main > form > article > div > label {
+    text-align: right;
+    display: inline-block;
+    margin-left: 4%;
+    width: 16%;
+  }
+  body > main > form > article > div > input {
+    width: 75%;
+  }
+  body > main > form > article > div > select {
+    width: 75%;
+  }
+  body > main > form > div {
+    margin-left: 8%;
+    margin-bottom: 1em;
+  }
+  body > main > form > div > div {
+    display: inline-flex;
+    margin-left: 7%;
+    width: 16%;
+  }
+  body > main > form > div > div input[type=number] {
+    width: 55%;
+  }
+  body > main > form > input[type=submit] {
+    float: right;
   }
 }
 

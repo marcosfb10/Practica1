@@ -1,5 +1,6 @@
 $verdeOscuro : darkgreen;
 $verdeClaro: lightgreen;
+$colorRequerido: red;
 *{
     body{
 
@@ -112,7 +113,7 @@ $verdeClaro: lightgreen;
                         >label,input{ 
                             >span.requerido{
                                 content: "(*)";
-                                color: red;
+                                color: $colorRequerido;
                             }
                         }
                         >input[type=number], input[type=date]{
@@ -244,7 +245,7 @@ $verdeClaro: lightgreen;
                     >label{
                         >span.requerido{
                             content: "(*)";
-                            color: red;
+                            color: $colorRequerido;
                         }
                     }
                 }
@@ -301,7 +302,8 @@ $verdeClaro: lightgreen;
     body{
         >main{
             width: 100%;
-            margin: 0 auto;
+/*            margin: 0 auto;*/
+            
             >div{
                 text-align: center;
                 >h1{
@@ -383,7 +385,7 @@ $verdeClaro: lightgreen;
                     >label{
                         >span.requerido{
                             content: "(*)";
-                            color: red;
+                            color: $colorRequerido;
                         }
                     }
                 }
@@ -428,7 +430,7 @@ $verdeClaro: lightgreen;
                     }
                 }
                 >input[type="submit"]{
-                    margin-left: 92%;
+                    float: right;
                 }
             }
 
@@ -437,7 +439,144 @@ $verdeClaro: lightgreen;
     }
 }
 @media screen and (min-width:1024px){
+    body{
+        margin: 0 auto;
+        >main{
+            width: 1007px;
+            
+            >div{
+                text-align: center;
+                >h1{
+                    width: 100%;
+                }
+            }
+            >span{
+                font-size: 16pt;
+                border:2px solid green;
+                display: inline-block;
+                width: 100%; 
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+            }
+            >ul{
+                text-align: right;
+                >li{
+                    >ul{
+                        padding: 0;
+                        margin: 0;
+                        display: none;
+                        list-style: none;
+                        >li{
+                            display: block;
+                        }
 
+                    }
+
+                }
+                >li:hover{
+                    cursor:pointer;
+                    >ul{
+                        text-align: left;
+                        display:block;  
+                        background-color:$verdeOscuro;
+                        >li{
+                            padding-top: 5px;
+                            padding-bottom: 5px;
+                            display: list-item;
+                            color: $verdeClaro;
+                            >a{
+                                color:$verdeClaro;
+                                text-decoration: none;
+                            }
+                        }
+                        >li:hover{
+                            background-color: $verdeClaro;
+                            color: $verdeOscuro;
+                            >a{
+                                color: $verdeOscuro;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+            >p{
+                text-align: right;
+                color: black;
+                font-size: 10pt;
+            }
+            >form{
+                display: inline-block;
+                margin: 0 auto;
+                width: 100%;
+
+                >h2{
+                    width: 100%;
+                    text-align: left;
+                    color: black;
+                    border:2px solid green;
+                    border-left: none;
+                    border-right: none;
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                }
+                >div{
+                    width: 100%;
+                    >label{
+                        >span.requerido{
+                            content: "(*)";
+                            color: $colorRequerido;
+                        }
+                    }
+                }
+                >article{
+                    >div{
+                        width: 100%;
+                        margin-bottom: 1em;
+                        >label,input{ 
+                            >span.requerido{
+                                content: "(*)";
+                                color: red;
+                            }
+                        }
+                        >input[type=number], input[type=date]{
+                            width: 10%;   
+                        }
+                        >label{
+                            text-align: right;
+                            display: inline-block;
+                            margin-left: 4%;
+                            width: 16%;
+                        }
+                        >input{
+                            width: 75%;
+                        }
+                        >select{
+                            width: 75%;
+                        }
+                    }
+                }
+                >div{
+                    margin-left: 8%;
+                    margin-bottom: 1em;
+                    >div{
+                        display: inline-flex;
+                        margin-left: 7%;
+                        width: 16%;
+
+                        input[type="number"]{
+                            width: 55%;
+                        }
+                    }
+                }
+                >input[type="submit"]{
+                    float: right;
+                }
+            }
+
+
+        }
+    }
 }
 
 
